@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <meta
+      name="description"
+      content="Video Meeting Web site created using react and peerjs."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <link rel="stylesheet" href="bootstrap-icons.css">
+
+    <title>U-join</title>
+
+    <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        transition: all 400ms;
+      }
+      #mydiv{
+        transition:none;
+      }
+      ::-webkit-scrollbar{
+        width:0
+      }
+
+      video{
+        object-fit: cover;
+      }
+  
+      /* Button 8 */
+  
+        .toggle-button-cover {
+          display: table-cell;
+          position: relative;
+          width: 200px;
+          height: 140px;
+          box-sizing: border-box;
+        }
+  
+        .button-cover {
+          height: 100px;
+          margin: 20px;
+          border-radius: 4px;
+        }
+  
+        .button-cover,
+        .knobs,
+        .layer {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+  
+        .layer {
+          width: 100%;
+          background-color: #dddddd;
+          transition: 0.3s ease all;
+          z-index: 1;
+        }
+  
+        .button {
+          position: relative;
+          top: 50%;
+          width: 110px;
+          height: 62px;
+          margin: -20px auto 0 auto;
+          overflow: hidden;
+        }
+  
+        .button.r,
+        .button.r .layer {
+          border-radius: 100px;
+        }
+  
+        .button.b2 {
+          border-radius: 2px;
+        }
+  
+        .checkbox {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+          opacity: 0;
+          cursor: pointer;
+          z-index: 3;
+        }
+  
+        .knobs {
+          z-index: 2;
+        }
+        #button-8 .knobs:before,
+        #button-8 .knobs:after,
+        #button-8 .knobs span {
+          position: absolute;
+          top: 7px;
+          width: 50px;
+          height: 50px;
+          font-size: 10px;
+          font-weight: bold;
+          text-align: center;
+          line-height: 1;
+          padding: 17px 4px;
+          border-radius: 50%;
+          transition: 0.3s ease all;
+        }
+  
+        #button-8 .knobs:before {
+          content: url("./sun.png");
+          color: #fff;
+          left: 4px;
+          top:4px;
+        }
+  
+        #button-8 .knobs:after {
+          content: url("./moon.png");
+          left: 55px;
+          color: #fff;
+          padding-top: 15px;
+          background-color: #080808;
+          opacity: 0;
+        }
+  
+        #button-8 .knobs:before,
+        #button-8 .knobs:after {
+          z-index: 2;
+        }
+  
+        #button-8 .knobs span {
+          left: 4px;
+          background-color: #03a9f4;
+          z-index: 1;
+        }
+  
+        #button-8 .checkbox:checked + .knobs:before {
+          opacity: 0;
+        }
+  
+        #button-8 .checkbox:checked + .knobs:after {
+          opacity: 1;
+        }
+  
+        #button-8 .checkbox:checked + .knobs span {
+          background-color: #dddddd;
+          transform: scale(4);
+        }
+
+        .ball:nth-child(1){
+          animation:moveup 4000ms infinite;
+          animation-timing-function: ease-in-out;
+        }
+
+        .ball:nth-child(2){
+          animation:moveup 6000ms infinite 2000ms;
+          animation-timing-function: ease-in-out;
+        }
+        .ball:nth-child(3){
+          animation:moveup 5000ms infinite 3000ms;
+          animation-timing-function: ease-in-out;
+        }
+        .ball:nth-child(4){
+          animation:moveup 6000ms infinite 2000ms;
+          animation-timing-function: ease-in-out;
+        }
+        .pic1{
+          animation:moveup 5000ms infinite 100ms;
+          animation-timing-function: ease-in-out;
+        }
+        .pic2{
+          animation:moveup 6000ms infinite 2000ms;
+          animation-timing-function: ease-in-out;
+        }
+        .pic3{
+          animation:moveup 5000ms infinite 4000ms;
+          animation-timing-function: ease-in-out;
+        }
+       
+
+        @keyframes moveup {
+          from{
+            bottom:-200px;
+          }
+          to{
+            bottom:100vh;
+          }
+        }
+        
+    </style>
+    <body>
+      <div id="root" style="box-sizing: border-box;width:100%;overflow: hidden; position:relative"></div>    
+    </body>
+    <script>
+
+    </script>
+  </html>

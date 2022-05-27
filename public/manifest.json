@@ -1,0 +1,35 @@
+{
+  "short_name": "Ujoin",
+  "name": "Ujoin",
+  "description":"Video Meeting App",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "92x103",
+      "type": "image/png"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "153x164"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "logosqr.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "authors": [ {
+    "name": "Nikhil S Kalburgi",
+    "email": "nikhilkalburgi19@gmail.com"
+  } ]
+}
